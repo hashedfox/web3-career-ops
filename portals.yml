@@ -1,0 +1,420 @@
+# Portal Scanner Configuration — Alexander S. Sly
+# Web3 Growth / BD / GTM / Partnerships roles
+#
+# Strategy (3 levels):
+#   1. Playwright → careers_url of each company (real-time, reliable)
+#   2. Greenhouse API → structured JSON (fast, Greenhouse-only)
+#   3. WebSearch with site: filters (broad discovery, may be stale)
+
+# -- Title filter --
+title_filter:
+  positive:
+    # -- Tier 1: Bullseye --
+    - "Head of Growth"
+    - "Growth Lead"
+    - "Growth Manager"
+    - "GTM"
+    - "Go-to-Market"
+    - "Head of Business Development"
+    - "Business Development Lead"
+    - "BD Lead"
+    - "VP Partnerships"
+    - "Director of Partnerships"
+    - "Head of Partnerships"
+    - "Partnerships Lead"
+    # -- Tier 2: Strong Fit --
+    - "Head of Strategy"
+    - "Strategy & Operations"
+    - "Chief of Staff"
+    - "Director of Revenue"
+    - "Revenue Lead"
+    - "Head of Ecosystem"
+    - "Ecosystem Development"
+    - "Ecosystem Lead"
+    - "Head of Marketing"
+    - "Marketing Lead"
+    # -- Adjacent / catch-all --
+    - "Business Development"
+    - "Partnerships"
+    - "Growth"
+    - "DevRel"
+    - "Developer Relations"
+    - "Community Lead"
+    - "Head of Community"
+    - "Sales Lead"
+    - "Head of Sales"
+  negative:
+    - "Junior"
+    - "Intern"
+    - "Internship"
+    - "Entry Level"
+    - "Software Engineer"
+    - "Frontend Engineer"
+    - "Backend Engineer"
+    - "Smart Contract"
+    - "Solidity Developer"
+    - "Rust Engineer"
+    - "QA Engineer"
+    - "Security Engineer"
+    - "DevOps"
+    - "SRE"
+    - "Data Scientist"
+    - "Machine Learning Engineer"
+    - "UI/UX Designer"
+    - "Graphic Designer"
+  seniority_boost:
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head"
+    - "Director"
+    - "VP"
+
+# -- Search queries --
+search_queries:
+
+  # -- Web3 Job Boards --
+  - name: Crypto.jobs — Growth & BD
+    query: 'site:crypto.jobs "Head of Growth" OR "Growth Lead" OR "Business Development" OR "GTM" OR "Partnerships"'
+    enabled: true
+
+  - name: Web3.career — Growth & BD
+    query: 'site:web3.career "Head of Growth" OR "Growth Lead" OR "BD" OR "Partnerships" OR "GTM"'
+    enabled: true
+
+  - name: CryptoJobsList — Growth
+    query: 'site:cryptojobslist.com "Growth" OR "Business Development" OR "Partnerships" OR "Head of Marketing"'
+    enabled: true
+
+  - name: Remote3 — Growth & BD
+    query: 'site:remote3.co "Growth" OR "Business Development" OR "Partnerships" OR "Ecosystem"'
+    enabled: true
+
+  # -- Greenhouse (Web3 companies) --
+  - name: Greenhouse — Web3 Growth
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Head of Growth" OR "Growth Lead" OR "GTM" crypto OR web3 OR blockchain OR DeFi OR DePIN'
+    enabled: true
+
+  - name: Greenhouse — Web3 BD
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Business Development" OR "Partnerships" OR "Ecosystem" crypto OR web3 OR blockchain OR protocol'
+    enabled: true
+
+  - name: Greenhouse — Web3 Strategy
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Chief of Staff" OR "Strategy" OR "Revenue" crypto OR web3 OR blockchain'
+    enabled: true
+
+  # -- Ashby (Web3 companies) --
+  - name: Ashby — Web3 Growth & BD
+    query: 'site:jobs.ashbyhq.com "Growth" OR "Business Development" OR "Partnerships" OR "Ecosystem" crypto OR web3 OR blockchain OR DeFi'
+    enabled: true
+
+  # -- Lever (Web3 companies) --
+  - name: Lever — Web3 Growth & BD
+    query: 'site:jobs.lever.co "Growth" OR "Business Development" OR "Partnerships" crypto OR web3 OR blockchain'
+    enabled: true
+
+  # -- Wellfound (startups) --
+  - name: Wellfound — Web3 Growth
+    query: 'site:wellfound.com "Head of Growth" OR "Growth Lead" OR "BD" web3 OR crypto OR blockchain remote'
+    enabled: true
+
+  # -- LinkedIn (broad discovery) --
+  - name: LinkedIn — Web3 Growth Head
+    query: 'site:linkedin.com/jobs "Head of Growth" web3 OR crypto OR blockchain OR DeFi remote'
+    enabled: true
+
+  - name: LinkedIn — Web3 BD Head
+    query: 'site:linkedin.com/jobs "Head of Business Development" OR "VP Partnerships" web3 OR crypto OR protocol remote'
+    enabled: true
+
+  # -- DePIN specific --
+  - name: DePIN Growth & BD
+    query: '"DePIN" "Head of Growth" OR "Growth Lead" OR "Business Development" OR "Partnerships" remote'
+    enabled: true
+
+  # -- Protocol / Foundation specific --
+  - name: Protocol Foundations — Growth
+    query: '"foundation" OR "protocol" "Head of Growth" OR "Ecosystem Lead" OR "BD Lead" web3 OR crypto remote'
+    enabled: true
+
+# -- Tracked companies --
+tracked_companies:
+
+  # ===== Protocol Labs Ecosystem =====
+
+  - name: Protocol Labs
+    careers_url: https://boards.greenhouse.io/protocollabs
+    api: https://boards-api.greenhouse.io/v1/boards/protocollabs/jobs
+    notes: "IPFS, Filecoin parent org. Deep existing network."
+    enabled: true
+
+  - name: Filecoin Foundation
+    careers_url: https://job-boards.greenhouse.io/filecoinfoundation
+    api: https://boards-api.greenhouse.io/v1/boards/filecoinfoundation/jobs
+    notes: "Direct connection from Storacha/FOC work."
+    enabled: true
+
+  # ===== L1/L2 Foundations =====
+
+  - name: Ethereum Foundation
+    careers_url: https://ethereum.org/en/about/jobs/
+    scan_method: websearch
+    scan_query: 'site:ethereum.org/en/about/jobs OR "Ethereum Foundation" "Growth" OR "BD" OR "Ecosystem"'
+    notes: "Ecosystem grants + growth roles."
+    enabled: true
+
+  - name: Solana Foundation
+    careers_url: https://jobs.solana.com
+    scan_method: websearch
+    scan_query: '"Solana" "Head of Growth" OR "BD" OR "Ecosystem" OR "Partnerships" site:jobs.solana.com OR site:boards.greenhouse.io'
+    notes: "Major L1. Active BD hiring."
+    enabled: true
+
+  - name: Polygon Labs
+    careers_url: https://job-boards.greenhouse.io/polygonlabs
+    api: https://boards-api.greenhouse.io/v1/boards/polygonlabs/jobs
+    notes: "L2 ecosystem. Previous grants coordination at xStar."
+    enabled: true
+
+  - name: Avalanche (Ava Labs)
+    careers_url: https://job-boards.greenhouse.io/avalabs
+    api: https://boards-api.greenhouse.io/v1/boards/avalabs/jobs
+    notes: "L1 with enterprise + DePIN focus."
+    enabled: true
+
+  - name: Aptos Labs
+    careers_url: https://job-boards.greenhouse.io/aptoslabs
+    api: https://boards-api.greenhouse.io/v1/boards/aptoslabs/jobs
+    notes: "Move-based L1. Previous grants coordination at xStar."
+    enabled: true
+
+  - name: Sui (Mysten Labs)
+    careers_url: https://jobs.ashbyhq.com/mystenlabs
+    notes: "Move-based L1. Growing ecosystem."
+    enabled: true
+
+  - name: Arbitrum (Offchain Labs)
+    careers_url: https://job-boards.greenhouse.io/offchainlabs
+    api: https://boards-api.greenhouse.io/v1/boards/offchainlabs/jobs
+    notes: "Leading L2. Large ecosystem fund."
+    enabled: true
+
+  - name: Optimism (OP Labs)
+    careers_url: https://job-boards.greenhouse.io/oplabs
+    api: https://boards-api.greenhouse.io/v1/boards/oplabs/jobs
+    notes: "L2 + Superchain ecosystem."
+    enabled: true
+
+  - name: Base (Coinbase L2)
+    careers_url: https://job-boards.greenhouse.io/coinbase
+    api: https://boards-api.greenhouse.io/v1/boards/coinbase/jobs
+    notes: "Coinbase L2. Massive ecosystem growth."
+    enabled: true
+
+  - name: StarkWare / Starknet
+    careers_url: https://job-boards.greenhouse.io/starkware
+    api: https://boards-api.greenhouse.io/v1/boards/starkware/jobs
+    notes: "ZK L2. Growing BD team."
+    enabled: true
+
+  - name: zkSync (Matter Labs)
+    careers_url: https://job-boards.greenhouse.io/matterlabs
+    api: https://boards-api.greenhouse.io/v1/boards/matterlabs/jobs
+    notes: "ZK L2. Active growth hiring."
+    enabled: true
+
+  - name: Near Protocol
+    careers_url: https://job-boards.greenhouse.io/near
+    api: https://boards-api.greenhouse.io/v1/boards/near/jobs
+    notes: "L1 with AI + chain abstraction focus."
+    enabled: true
+
+  - name: Cosmos (Interchain Foundation)
+    careers_url: https://jobs.lever.co/interchain
+    notes: "IBC ecosystem. Appchains."
+    enabled: true
+
+  # ===== DePIN & Infrastructure =====
+
+  - name: Helium (Nova Labs)
+    careers_url: https://jobs.ashbyhq.com/nova-labs
+    notes: "DePIN leader. Wireless infrastructure."
+    enabled: true
+
+  - name: Hivemapper
+    careers_url: https://jobs.ashbyhq.com/hivemapper
+    notes: "DePIN. Decentralised mapping."
+    enabled: true
+
+  - name: IoTeX
+    careers_url: https://iotex.io/careers
+    scan_method: websearch
+    scan_query: '"IoTeX" careers OR jobs "Growth" OR "BD" OR "Partnerships"'
+    notes: "DePIN L1. Active ecosystem growth."
+    enabled: true
+
+  - name: Render Network
+    careers_url: https://jobs.ashbyhq.com/rendernetwork
+    scan_method: websearch
+    scan_query: '"Render Network" OR "RNDR" careers OR jobs "Growth" OR "BD"'
+    notes: "Decentralised GPU rendering. DePIN."
+    enabled: true
+
+  - name: Arweave / AO
+    careers_url: https://arweave.org/careers
+    scan_method: websearch
+    scan_query: '"Arweave" OR "AO Computer" careers OR jobs "Growth" OR "BD" OR "Ecosystem"'
+    notes: "Permanent storage. AO compute layer."
+    enabled: true
+
+  - name: Akash Network
+    careers_url: https://akash.network/careers
+    scan_method: websearch
+    scan_query: '"Akash Network" careers OR jobs "Growth" OR "BD" OR "Partnerships"'
+    notes: "Decentralised cloud compute. DePIN."
+    enabled: true
+
+  # ===== DeFi & Trading =====
+
+  - name: Uniswap Labs
+    careers_url: https://job-boards.greenhouse.io/uniswaplabs
+    api: https://boards-api.greenhouse.io/v1/boards/uniswaplabs/jobs
+    notes: "Leading DEX. Large BD team."
+    enabled: true
+
+  - name: Aave
+    careers_url: https://jobs.ashbyhq.com/aave
+    notes: "DeFi lending protocol."
+    enabled: true
+
+  - name: dYdX
+    careers_url: https://job-boards.greenhouse.io/dydx
+    api: https://boards-api.greenhouse.io/v1/boards/dydx/jobs
+    notes: "Decentralised perpetuals exchange."
+    enabled: true
+
+  - name: 1inch
+    careers_url: https://jobs.lever.co/1inch
+    notes: "DEX aggregator. Remote."
+    enabled: true
+
+  # ===== Infra & Tooling =====
+
+  - name: Chainlink Labs
+    careers_url: https://job-boards.greenhouse.io/chainlinklabs
+    api: https://boards-api.greenhouse.io/v1/boards/chainlinklabs/jobs
+    notes: "Oracle network. Massive BD org."
+    enabled: true
+
+  - name: LayerZero Labs
+    careers_url: https://job-boards.greenhouse.io/layerzerolabs
+    api: https://boards-api.greenhouse.io/v1/boards/layerzerolabs/jobs
+    notes: "Cross-chain messaging. Direct xStar connection."
+    enabled: true
+
+  - name: Wormhole (xLabs)
+    careers_url: https://job-boards.greenhouse.io/wormhole
+    api: https://boards-api.greenhouse.io/v1/boards/wormhole/jobs
+    notes: "Cross-chain bridge. Competitor/partner to LayerZero."
+    enabled: true
+
+  - name: Alchemy
+    careers_url: https://job-boards.greenhouse.io/alchemy
+    api: https://boards-api.greenhouse.io/v1/boards/alchemy/jobs
+    notes: "Web3 dev platform. Enterprise focus."
+    enabled: true
+
+  - name: Blockdaemon
+    careers_url: https://job-boards.greenhouse.io/blockdaemon
+    api: https://boards-api.greenhouse.io/v1/boards/blockdaemon/jobs
+    notes: "Node infrastructure. Enterprise blockchain."
+    enabled: true
+
+  - name: Consensys
+    careers_url: https://job-boards.greenhouse.io/consensys
+    api: https://boards-api.greenhouse.io/v1/boards/consensys/jobs
+    notes: "MetaMask, Infura, Linea. Large BD/Growth teams."
+    enabled: true
+
+  - name: Fireblocks
+    careers_url: https://job-boards.greenhouse.io/fireblocks
+    api: https://boards-api.greenhouse.io/v1/boards/fireblocks/jobs
+    notes: "Enterprise crypto custody & infra."
+    enabled: true
+
+  # ===== Exchanges & CeFi =====
+
+  - name: Coinbase
+    careers_url: https://job-boards.greenhouse.io/coinbase
+    api: https://boards-api.greenhouse.io/v1/boards/coinbase/jobs
+    notes: "Largest US exchange. BD + institutional growth."
+    enabled: true
+
+  - name: Kraken
+    careers_url: https://jobs.lever.co/kraken
+    notes: "Exchange. Remote-first."
+    enabled: true
+
+  - name: Binance
+    careers_url: https://www.binance.com/en/careers
+    scan_method: websearch
+    scan_query: 'site:binance.com/en/careers "Growth" OR "Business Development" OR "Partnerships"'
+    notes: "Largest global exchange."
+    enabled: true
+
+  - name: OKX
+    careers_url: https://www.okx.com/careers
+    scan_method: websearch
+    scan_query: '"OKX" careers "Growth" OR "BD" OR "Partnerships"'
+    notes: "Previous investor relationship from xStar."
+    enabled: true
+
+  # ===== Identity & Social =====
+
+  - name: ENS Labs
+    careers_url: https://job-boards.greenhouse.io/enslabs
+    api: https://boards-api.greenhouse.io/v1/boards/enslabs/jobs
+    notes: "Ethereum Name Service. Direct domain expertise from xStar."
+    enabled: true
+
+  - name: Unstoppable Domains
+    careers_url: https://jobs.lever.co/unstoppabledomains
+    notes: "Web3 domains. Competitor from xStar days."
+    enabled: true
+
+  - name: Lens Protocol (Avara)
+    careers_url: https://job-boards.greenhouse.io/avara
+    api: https://boards-api.greenhouse.io/v1/boards/avara/jobs
+    notes: "Decentralised social + Aave parent."
+    enabled: true
+
+  - name: Farcaster (Merkle Manufactory)
+    careers_url: https://job-boards.greenhouse.io/merklemanufactory
+    api: https://boards-api.greenhouse.io/v1/boards/merklemanufactory/jobs
+    notes: "Decentralised social protocol."
+    enabled: true
+
+  # ===== AI x Crypto =====
+
+  - name: Ritual
+    careers_url: https://jobs.ashbyhq.com/ritual
+    notes: "AI x crypto infrastructure. Hot sector."
+    enabled: true
+
+  - name: Bittensor (Opentensor Foundation)
+    careers_url: https://jobs.ashbyhq.com/opentensor
+    scan_method: websearch
+    scan_query: '"Bittensor" OR "Opentensor" careers OR jobs "Growth" OR "BD" OR "Ecosystem"'
+    notes: "Decentralised AI network."
+    enabled: true
+
+  - name: Gensyn
+    careers_url: https://jobs.ashbyhq.com/gensyn
+    notes: "Decentralised ML compute. a16z backed."
+    enabled: true
+
+  - name: Autonolas (Valory)
+    careers_url: https://jobs.lever.co/valory
+    notes: "Autonomous AI agents on-chain. OLAS token."
+    enabled: true
