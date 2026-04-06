@@ -4,6 +4,10 @@
 candidate:
   full_name: "Alexander S. Sly"
   email: "alexander.s.j.sly@gmail.com"
+  location: "Buenos Aires, Argentina"
+  linkedin: "linkedin.com/in/alexander-sly"
+  nationality: "Australian"
+  location_flexibility: "Remote / async-first globally"
 
 target_roles:
   # Tier 1 — Bullseye (apply to every one you see)
