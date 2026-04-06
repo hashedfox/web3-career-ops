@@ -74,17 +74,24 @@ title_filter:
 # -- Search queries --
 search_queries:
 
-  # -- Web3 Job Boards --
+  # -- Web3 Job Boards (direct portal scan) --
+  - name: CryptoJobsList — Growth & BD
+    query: 'site:cryptojobslist.com "Head of Growth" OR "Growth Lead" OR "Business Development" OR "GTM" OR "Partnerships" OR "Head of Marketing" OR "Ecosystem"'
+    portal_url: https://cryptojobslist.com/
+    enabled: true
+
+  - name: Web3.career — Remote Growth & BD
+    query: 'site:web3.career "Head of Growth" OR "Growth Lead" OR "BD" OR "Partnerships" OR "GTM" OR "Ecosystem"'
+    portal_url: https://web3.career/remote-jobs
+    enabled: true
+
+  - name: CryptocurrencyJobs — Growth & BD
+    query: 'site:cryptocurrencyjobs.co "Head of Growth" OR "Growth Lead" OR "Business Development" OR "GTM" OR "Partnerships" OR "Head of Marketing" OR "Ecosystem"'
+    portal_url: https://cryptocurrencyjobs.co/
+    enabled: true
+
   - name: Crypto.jobs — Growth & BD
     query: 'site:crypto.jobs "Head of Growth" OR "Growth Lead" OR "Business Development" OR "GTM" OR "Partnerships"'
-    enabled: true
-
-  - name: Web3.career — Growth & BD
-    query: 'site:web3.career "Head of Growth" OR "Growth Lead" OR "BD" OR "Partnerships" OR "GTM"'
-    enabled: true
-
-  - name: CryptoJobsList — Growth
-    query: 'site:cryptojobslist.com "Growth" OR "Business Development" OR "Partnerships" OR "Head of Marketing"'
     enabled: true
 
   - name: Remote3 — Growth & BD
