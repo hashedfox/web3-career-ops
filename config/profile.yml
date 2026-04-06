@@ -1,0 +1,171 @@
+# Career-Ops Profile Configuration
+# This is the single source of truth for your personal data across all modes.
+
+candidate:
+  full_name: "Alexander S. Sly"
+  email: "alexander.s.j.sly@gmail.com"
+
+target_roles:
+  # Tier 1 — Bullseye (apply to every one you see)
+  primary:
+    - "Head of Growth"
+    - "GTM Lead / Head of GTM"
+    - "Head of Business Development"
+    - "VP/Director of Partnerships"
+    - "Growth Lead"
+  # Tier 2 — Strong Fit (80%+ overlap)
+  secondary:
+    - "Head of Strategy & Operations"
+    - "Chief of Staff"
+    - "Director of Revenue / Revenue Lead"
+    - "Head of Ecosystem Development"
+    - "Head of Marketing"
+  archetypes:
+    - name: "Head of Growth"
+      level: "Head/Director"
+      fit: "primary"
+      notes: "Exact function at Storacha — full-stack GTM + team + ops. Highest match."
+    - name: "GTM Lead / Head of GTM"
+      level: "Head/Lead"
+      fit: "primary"
+      notes: "Identical work to Head of Growth, slightly narrower scope. Pre-launch and early-stage protocols."
+    - name: "Head of Business Development"
+      level: "Head/Director"
+      fit: "primary"
+      notes: "xStar role directly — enterprise pipeline + ecosystem partnerships. DePIN and infra protocols."
+    - name: "VP/Director of Partnerships"
+      level: "VP/Director"
+      fit: "primary"
+      notes: "Same as Head of BD scoped to ecosystem partner management. L1/L2 foundations."
+    - name: "Growth Lead"
+      level: "Lead"
+      fit: "primary"
+      notes: "Same function as Head of Growth at earlier-stage companies."
+    - name: "Head of Strategy & Operations"
+      level: "Head/Director"
+      fit: "secondary"
+      notes: "FOC strategy work + operational buildout. Common at foundations and larger protocols."
+    - name: "Chief of Staff"
+      level: "Senior"
+      fit: "secondary"
+      notes: "Cross-functional scope, strategic research, operational cadence. Often leads to C-suite track."
+    - name: "Director of Revenue / Revenue Lead"
+      level: "Director/Lead"
+      fit: "secondary"
+      notes: "GTM + sales + pipeline ops combined. Emphasise conversion metrics."
+    - name: "Head of Ecosystem Development"
+      level: "Head/Director"
+      fit: "secondary"
+      notes: "Blend of BD + community + DevRel. xStar + MUCC narratives together are strong here."
+    - name: "Head of Marketing"
+      level: "Head/Director"
+      fit: "secondary"
+      notes: "Full stack marketing (content, outbound, positioning, sales enablement). Strategy-first."
+
+narratives:
+  # Narrative 1: Growth Lead, Storacha (Protocol Labs)
+  # Best for: Head of Growth, GTM Lead, Director of Revenue, Head of Marketing
+  storacha:
+    headline: "Growth Lead who built enterprise B2B GTM from zero at a Protocol Labs portfolio company"
+    best_for:
+      - "Head of Growth"
+      - "GTM Lead"
+      - "Director of Revenue"
+      - "Head of Marketing"
+    story: >
+      Led the growth function at Storacha, a decentralized hot storage platform built by Protocol Labs
+      veterans who co-architected IPFS and Filecoin. Inherited a developer-focused product with no
+      enterprise sales motion and built the entire B2B go-to-market from zero. Defined three core ICPs
+      (IPFS pinning migration, DePIN protocols, research institutions), deployed outbound infrastructure
+      across Apollo.io, Salesforge, HubSpot, Clay, and n8n automation workflows. Managed a cross-functional
+      team spanning marketing, BD, community, and engineering. Built weekly operating cadences, KPI dashboards,
+      and reporting systems. Pioneered the digital preservation vertical targeting GLAM institutions.
+      Growth infrastructure and GTM strategy formed the basis of the Filecoin Onchain Cloud (FOC) initiative
+      after the team was absorbed into the Filecoin Foundation.
+    cv_lines:
+      - "Built enterprise B2B go-to-market from zero at a Protocol Labs portfolio company, defining ICPs, outbound infrastructure, and sales enablement that generated a qualified pipeline of 15+ enterprise prospects within 4 months."
+      - "Led cross-functional team of 5 across marketing, BD, community, and engineering, running weekly operating cadences and KPI reporting."
+      - "Designed and executed a 6-month GTM strategy for Filecoin Onchain Cloud (FOC) targeting $100K ARR, including competitive analysis across 3 ICPs, partner trackers, and operational playbooks."
+      - "Pioneered the digital preservation vertical, producing institutional case studies and targeted outreach to NDSA/DPC member organisations, positioning Storacha as a credible alternative for GLAM institutions."
+      - "Growth strategy and team capabilities directly contributed to the team joining the Filecoin Foundation to lead the FOC initiative."
+
+  # Narrative 2: Head of Business Development, xStar / OpenMeta
+  # Best for: Head of BD, VP Partnerships, Head of Ecosystem Development, Director of Strategic Partnerships
+  xstar:
+    headline: "Head of BD who drove ecosystem expansion for the world's largest omnichain domain registrar"
+    best_for:
+      - "Head of Business Development"
+      - "VP/Director of Partnerships"
+      - "Head of Ecosystem Development"
+      - "Director of Strategic Partnerships"
+    story: >
+      Served as Head of Business Development at xStar (OpenMeta Pte. Ltd.), the team behind Star Protocol,
+      the world's largest omnichain domain name registrar with 450K+ UAW across 27 blockchain networks and
+      a community exceeding 1M users. Drove partnership and ecosystem expansion from single-chain to fully
+      omnichain identity protocol. Identified, negotiated, and closed integration partnerships with L1/L2
+      ecosystems, securing co-marketing agreements, technical integrations, and white-label deployments.
+      Managed relationships with strategic investors including OKX, Youbi Capital, and Pluto Capital.
+      Coordinated grants programs from Polygon, BNB Chain, and Aptos. Developed business case for
+      Proof of Humanity as a Service platform and built the TLD launchpad partner onboarding framework.
+    cv_lines:
+      - "Led business development at xStar (OpenMeta), the team behind Star Protocol, the largest omnichain domain registrar with 450K+ UAW across 27 blockchain networks."
+      - "Built and managed the ecosystem partnership pipeline, securing integrations with L1/L2 networks and negotiating co-marketing and white-label agreements with protocol teams."
+      - "Coordinated investor relations and grants program participation across OKX, Polygon, BNB Chain, and Aptos ecosystems."
+      - "Developed go-to-market strategy for the Proof of Humanity as a Service product, positioning xStar's identity verification against sybil attacks in an AI-first market."
+      - "Designed and launched the TLD launchpad partner onboarding framework, enabling Web3 projects to issue branded top-level domains via Star's SDK."
+
+  # Narrative 3: Founder & President, MUCC
+  # Best for: Community Lead, DevRel, Ecosystem Development, Head of Growth (early-stage), Chief of Staff
+  mucc:
+    headline: "Founded Melbourne University's first crypto club — community-first growth from day one"
+    best_for:
+      - "Community Lead"
+      - "DevRel"
+      - "Head of Ecosystem Development"
+      - "Head of Growth (early-stage)"
+      - "Chief of Staff"
+    story: >
+      Founded and served as President of Melbourne University's first cryptocurrency and blockchain club
+      (MUCC) while completing studies in civil engineering and finance. Built the organisation from scratch
+      during the early days of institutional blockchain interest in Australia. Established connections with
+      cryptocurrency analysts, industry professionals, and academic researchers. Hosted expert panels
+      bringing together practitioners from across the Australian crypto industry. Ran the club for two years,
+      growing it into a recognised university society. Published original research on emerging architectures
+      including Holochain's distributed consensus model. Established the community-first growth playbook
+      (identify need → build infrastructure → educate market → create pathways) applied across every
+      subsequent role.
+    cv_lines:
+      - "Founded Melbourne University's first cryptocurrency club (MUCC), building a recognised student society from scratch with regular expert panels, industry partnerships, and educational programming."
+      - "Served as President for 2 years, establishing connections with analysts, industry professionals, and academic researchers across Australia's blockchain ecosystem."
+      - "Published original research on distributed consensus architectures, demonstrating deep technical curiosity alongside business development capabilities."
+      - "Established the community-first growth playbook (identify need, build infrastructure, educate market, create pathways) applied consistently across every subsequent professional role."
+
+proof_points:
+  - name: "Enterprise Pipeline from Cold Start"
+    metric: "15+ qualified enterprise prospects in 4 months from zero pipeline"
+    context: "Storacha / Protocol Labs"
+    details: >
+      Built entire growth engine from scratch: defined 3 ICPs, deployed outbound tooling across
+      Apollo.io, Salesforge, HubSpot, Clay, and n8n (6 automated sequences), ran multi-domain cold email
+      and LinkedIn outreach, produced case studies (Harvard LIL, Starling Lab, MuckRock). Generated pipeline
+      including signed LOIs with Blurt Media and ZkAGI, advanced discussions with Babylon Labs, Agora Citizen,
+      and Mawari Network. Pipeline and GTM assets contributed to team's acquisition by the Filecoin Foundation.
+
+  - name: "Ecosystem Scale at xStar"
+    metric: "450K+ UAW across 27 blockchain networks with 300+ partner integrations"
+    context: "xStar / OpenMeta"
+    details: >
+      Drove BD strategy for Star Protocol's expansion from single-chain to world's largest omnichain domain
+      registrar. Managed partner pipeline across L1/L2 ecosystems, negotiated integration and co-marketing
+      agreements, coordinated grants (Polygon, BNB Chain, Aptos), maintained investor relations with OKX.
+      Developed Proof of Humanity as a Service positioning and TLD launchpad onboarding framework.
+
+  - name: "GTM Strategy to Foundation Acquisition"
+    metric: "6-month GTM plan targeting $100K ARR adopted by Filecoin Foundation for FOC launch"
+    context: "Storacha → Filecoin Foundation"
+    details: >
+      Built comprehensive GTM strategy for Filecoin Onchain Cloud (FOC): competitive differentiation across
+      3 ICPs (IPFS pinning migration, DePIN scale-up, agent-native commerce), partner/portfolio tracker,
+      week-by-week operational playbooks, branded KPI dashboard, and technical positioning including x402
+      payment protocol integration architecture. Entire strategy package adopted by FilOz as the execution
+      blueprint for the FOC commercial launch.
