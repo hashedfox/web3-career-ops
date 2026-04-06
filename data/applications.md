@@ -2,6 +2,7 @@
 
 | # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 |---|------|---------|------|-------|--------|-----|--------|-------|
+| 7 | 2026-04-06 | Visa | Director, Crypto Partnerships & GTM Strategy APAC | 1.8/5 | NO APLICAR | ❌ | [007](reports/007-visa-2026-04-06.md) | 3 hard blockers: 12+ yr req, Singapore on-site, TradFi payments domain. |
 | 2 | 2026-04-06 | peaq (EoT Labs) | DePIN/Web3 Growth Lead | 4.5/5 | Evaluada | ✅ | [002](reports/002-peaq-2026-04-06.md) | Near-perfect fit: ecosystem growth + DePIN + partnerships. Base comp low ($72-85K) but token upside. STRONG APPLY. |
 | 3 | 2026-04-06 | Aptos Labs | Head of BD - Shelby Platform | 4.6/5 | Evaluada | ❌ | [003](reports/003-aptos-shelby-2026-04-06.md) | #1 priority. Decentralized storage GTM from zero = Storacha mirror. Direct Aptos grants connection from xStar. |
 | 4 | 2026-04-06 | Arbitrum Foundation | Head of Ecosystem Growth | 4.3/5 | Evaluada | ✅ | [004](reports/004-arbitrum-2026-04-06.md) | Strong ecosystem fit; 10yr req is soft gap, impact density compensates. Remote APAC/EMEA. |
