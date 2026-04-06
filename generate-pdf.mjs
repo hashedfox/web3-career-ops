@@ -67,7 +67,8 @@ async function generatePDF() {
     `file://$1.woff2')`
   );
 
-  const browser = await chromium.launch({ headless: true });
+  const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined;
+  const browser = await chromium.launch({ headless: true, executablePath });
   const page = await browser.newPage();
 
   // Set content with file base URL for any relative resources
